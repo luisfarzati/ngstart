@@ -1,0 +1,23 @@
+
+if [ "$#" -ne 1 ]; then
+	echo "Usage: ngstart {application name}"
+  exit 1
+fi
+
+if [ -d "$1" ]; then
+	echo "Error: a directory with the name $1 already exists"
+  exit 1
+fi
+
+APP_NAME=$1
+
+cp -r ~/.templates/ngstart $APP_NAME
+cd $APP_NAME
+sed -i "s/APP_NAME/$APP_NAME/g" bower.json package.json src/index.html src/app/APP_NAME.js
+mv src/app/APP_NAME.js src/app/$APP_NAME.js
+
+npm install --save-dev gulp gulp-livereload tiny-lr connect connect-modrewrite karma-jasmine karma-phantomjs-launcher gulp-karma
+bower install --save angular angular-mocks
+
+gulp
+
