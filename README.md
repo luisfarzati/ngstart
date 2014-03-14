@@ -10,6 +10,7 @@ Ubuntu-based. For any other distros, you may need to tweak something.
 * npm
 * bower
 * gulp
+* LiveReload browser plugin
 
 To install these:
 
@@ -17,6 +18,8 @@ To install these:
 $ sudo apt-get install npm
 $ sudo npm install -g bower gulp
 ```
+
+LiveReload for Chrome: https://chrome.google.com/webstore/detail/jnihajbhpnppcggbcgedagnkighmdlei
 
 ## Installation
 
