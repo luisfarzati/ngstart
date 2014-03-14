@@ -1,7 +1,7 @@
 ngstart
 =======
 
-Kickstart script that creates a skeleton AngularJS project with Gulp, livereload and automated tests. 
+Kickstart script that creates a skeleton AngularJS project with Gulp, livereload and automated tests.
 
 Ubuntu-based. For any other distros, you may need to tweak something.
 
@@ -40,6 +40,12 @@ ngstart will take care of the following:
 * run `npm install` for npm dependencies (such as gulp plugins)
 * run `bower install` for bower dependencies (such as angular)
 * run `gulp` which starts a livereload-enabled server and automated tests
+
+If test environment is not needed, you can run ngstart with `--no-test`:
+
+`ngstart --no-test myapp`
+
+thus saving download/installation time of Karma, PhantomJS and stuff.
 
 ### Why should I use this instead of Yeoman, etc?
 
